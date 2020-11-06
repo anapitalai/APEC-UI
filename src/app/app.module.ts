@@ -37,12 +37,12 @@ import { HomeComponent } from './home/home.component';
 import { EmailComponent } from './email/email.component';
 import { EmailCreateComponent } from './email/email-create/email-create.component';
 import { EmailListComponent } from './email/email-list/email-list.component';
-import { NoticeComponent } from './notice/notice.component';
-import { NoticeListComponent } from './notice/notice-list/notice-list.component';
-import { NoticeCreateComponent } from './notice/notice-create/notice-create.component';
-import { NoticeSingleComponent } from './notice/notice-single/notice-single.component';
-import { NoticeUpdateComponent } from './notice/notice-update/notice-update.component';
-import { NoticeService } from './shared/services/notice.service';
+import { NoticeComponent } from './tourism/notice.component';
+import { NoticeListComponent } from './tourism/notice-list/notice-list.component';
+import { NoticeCreateComponent } from './tourism/notice-create/notice-create.component';
+import { NoticeSingleComponent } from './tourism/notice-single/notice-single.component';
+import { NoticeUpdateComponent } from './tourism/notice-update/notice-update.component';
+import { NoticeService } from './shared/services/tourism.service';
 import { LectureComponent } from './lecture/lecture.component';
 import { LectureListComponent } from './lecture/lecture-list/lecture-list.component';
 

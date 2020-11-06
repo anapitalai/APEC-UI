@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {Notice} from 'src/app/shared/models/notice';
+import {Notice} from 'src/app/shared/models/tourism';
 import { getLocaleDateFormat } from '@angular/common';
 
 @Pipe({

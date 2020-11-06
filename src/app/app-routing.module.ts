@@ -25,11 +25,11 @@ import { FeedbackCreateComponent } from './feedback/feedback-create/feedback-cre
 import { FeedbackSingleComponent } from './feedback/feedback-single/feedback-single.component';
 import { FeedbackUpdateComponent } from './feedback/feedback-update/feedback-update.component';
 import { HomeComponent } from './home/home.component';
-import { NoticeComponent } from './notice/notice.component';
-import { NoticeListComponent } from './notice/notice-list/notice-list.component';
-import { NoticeCreateComponent } from './notice/notice-create/notice-create.component';
-import { NoticeSingleComponent } from './notice/notice-single/notice-single.component';
-import { NoticeUpdateComponent } from './notice/notice-update/notice-update.component';
+import { NoticeComponent } from './tourism/notice.component';
+import { NoticeListComponent } from './tourism/notice-list/notice-list.component';
+import { NoticeCreateComponent } from './tourism/notice-create/notice-create.component';
+import { NoticeSingleComponent } from './tourism/notice-single/notice-single.component';
+import { NoticeUpdateComponent } from './tourism/notice-update/notice-update.component';
 import { LectureComponent } from './lecture/lecture.component';
 import { LectureListComponent } from './lecture/lecture-list/lecture-list.component';
 import { AuthGuard } from './shared/guards/guards.service';
@@ -112,7 +112,7 @@ const routes: Routes = [
 },
   
 {
-    path:'notice',
+    path:'tourism',
    
     component:NoticeComponent,
    

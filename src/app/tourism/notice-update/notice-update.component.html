@@ -1,0 +1,40 @@
+<div *ngIf='notice'>
+    <form (ngSubmit)="updateContact()">
+        <div class="form-group">
+            <label for="">Site</label>
+            <input class="form-control" type='text' name="site" [(ngModel)]='notice.site'>
+        </div>
+        <div class="form-group">
+            <label for="">Description</label>
+            <input class="form-control" type='textarea' name="description" [(ngModel)]='notice.description'>
+        </div>
+        <div class="form-group">
+            <label for="">Contacts</label>
+            <input class="form-control" type='text' name="contacts" [(ngModel)]='notice.contacts'>
+        </div>
+
+        <div class="form-group">
+            <label for="">Address</label>
+            <input class="form-control" type='text' name="address" [(ngModel)]='notice.address'>
+        </div>
+        <!-- <div class="form-group">
+            <label for="">FormattedAddress</label>
+            <input class="form-control" type='text' name="address.formattedAddress" [(ngModel)]='notice.location.formattedAddress'>
+        </div> -->
+        <div class="form-group">
+            <label for="">tourId</label>
+            <input class="form-control" type='text' name="tourId" [(ngModel)]='notice.tourId'>
+        </div>
+
+
+        <div class="form-group">
+            <label for="">Created At</label>
+            <input class='form-control' type='text' name="createdAt" [(ngModel)]='notice.createdAt'>
+        </div>
+
+
+        <div *ngIf='successMessage' class="alert alert-success">{{successMessage}}</div>
+        <div *ngIf='errorMessage' class="alert alert-danger">{{errorMessage}}</div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>

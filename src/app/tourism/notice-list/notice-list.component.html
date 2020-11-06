@@ -1,0 +1,32 @@
+<div class="jumbotron text-center">
+  <h2>Tourism in the Country</h2><hr>
+  <h4>Tourist sites in the country</h4><br>
+  <button *ngIf='auth.isLoggedIn()' routerLink='/tourism/create' class="btn btn-info">New Tourist Site</button>
+  <div class="words"><b>
+  APEC Challenge 2020
+  </b>
+  </div>
+</div>
+
+<div *ngIf="notices">
+  <div *ngFor="let c of (notices)" class="col-sm-4">
+    <div class="thumbnail notice-thumbnail" [routerLink]="['/tourism',c.id]">
+      <h3> {{ c.site }}|{{c.tourId}}</h3>
+      <hr />
+      <h4>{{c.description}}</h4>
+   
+
+      <img [src]='c.listTourImages' class='img-responsive img-circle'>
+    
+    
+      <hr>
+      <h5><b>{{c.createdAt | date:'short'}}</b></h5> <h5>{{c.contacts}}</h5>
+
+
+
+    </div>
+    
+
+   
+  </div>
+</div>

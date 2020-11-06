@@ -19,7 +19,7 @@ export class AuthComponent implements OnInit {
     this.errorMessage='';
       this.authService.login(this.credentials.email,this.credentials.password)
       .subscribe(data=>{
-        this.router.navigate(['/properties']);
+        this.router.navigate(['/tourism']);
         console.log(data);
       },
       err=>{

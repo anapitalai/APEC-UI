@@ -1,0 +1,65 @@
+<!-- <div id='mapid'></div> -->
+<div *ngIf="notices">
+  <div class="user-card text-center">
+    <div class="text-center">
+      <h2>{{ notices.site }}</h2>
+
+
+      <h4>{{ notices.address }}</h4>
+
+    </div>
+
+
+    <div class="container">
+
+      <div class="img-parent">
+
+          <div class='container' *ngFor='let i of notices.productImage'>
+              <button type="button" (click)="show()"><img [src]='i' class='img-responsive img-circle'></button>
+
+          </div>
+      </div>
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal" [style.display]="showModal ? 'block' : 'none'">
+          <div class="modal-dialog">
+              <div class="modal-content">
+
+
+                  <div class='container' *ngFor='let i of notices.productImage'>
+                      <img [src]='i' class='img-responsive img-thumbnail'>
+                  </div>
+
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal"
+                          (click)="hide()">Close</button>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <button *ngIf='auth.isLoggedIn()' [routerLink]="['/tourism',notices._id,'edit']"
+  class="btn btn-primary btn-lg">Edit</button>
+<button *ngIf='auth.isLoggedIn()' (click)="teacherDelete()" class="btn btn-danger btn-lg">Delete</button>
+
+
+
+    <!-- <button
+      *ngIf="auth.isLoggedIn()"
+      [routerLink]="['/tourism', notices._id, 'edit']"
+      class="row col-sm-6 btn btn-primary btn-sm"
+    >
+      Edit
+    </button>
+    <button
+      *ngIf="auth.isLoggedIn()"
+      (click)="teacherDelete()"
+      class="row col-sm-6 btn btn-danger btn-sm"
+    >
+      Delete
+    </button> -->
+  </div>
+</div>
